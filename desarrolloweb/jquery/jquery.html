@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+    <script src="jquery-3.4.1.min.js"></script>
+   <style type="text/css">
+       #circulo{
+           width: 150px;
+           height: 150px;
+           border-radius: 50%;
+           background-color: green;
+           margin: 10px;
+       }
+       .cuadrado{
+           width: 150px;
+           height: 150px;
+           background-color: red;
+           margin: 10px;
+       }
+       body{
+           font-family: sans-serif;
+           font-size: 150%;
+            background-image: linear-gradient(to right, rgb(0, 153, 255), rgb(255, 255, 255));
+           
+       }
+       input{
+           height: 30px;
+           padding: 5px 5px 12px 5px;
+           font-size: 25px;
+           border-radius: 5px;
+           border: 1px solid grey;
+           width: 320px;
+           
+       }
+       label{
+           position: relative;
+           top:5px;
+           width: 200px;
+           float: left;
+       }
+       #contenedor{
+           width: 600px;
+           margin: 0 auto;
+       }
+       #botonEnviar{
+           width: 200px;
+           height: 35px;
+           margin-left: 200px;
+           
+       }
+       #errores{
+           width: 600px;
+           height: 100px;
+           border-radius: 10%;
+           background-image: linear-gradient(to right, rgb(45, 153, 255), rgb(255, 255, 255));
+           margin: 0 auto;
+       }
+       #mensajeExito{
+           width: 600px;
+           height: 50px;
+           border-radius: 10%;
+           background-image: linear-gradient(to right, rgb(45, 153, 255), rgb(255, 255, 255));
+       }
+       
+   </style>
+</head>
+<body>
+     <div id="contenedor">
+         <!--email-->
+         <div id="errores">
+             
+         </div>
+         <p>
+              <label for="email">Email</label>
+               <input type="texto" name="emai" id="email" placeholder="Tu email">
+         </p>
+           <!--telefono-->
+           <p>
+           <label for="telefono">Teléfono</label>
+           <input type="texto" name="telefono" id="telefono" placeholder="Tu telefono">
+           </p>
+           <!--password-->
+           <p>
+           <label for="password">Password</label>
+           <input type="password" name="password" id="password" placeholder="Tu password">
+           </p>
+           <!--confirmarPassword-->
+           <p>
+           <label for="confirmarPassword">Confirmar Password</label>
+           <input type="password" name="confirmarPassword" id="confirmarPassword" placeholder="Tu confirmarPassword">
+           </p>
+              <input type="submit" id="botonEnviar"  value="Darse de Alta">
+               
+           <div id="mensajeExito">
+               
+           </div>
+     </div>
+    <!--<div id="circulo"></div>-->
+    
+    <!--<iframe src="http://www.cnn.com" frameborder="1"></iframe>-->
+    <script type="application/javascript">
+    
+        if(typeof jQuery == "undefined"){   
+            console.log("jQuery no funciona");
+        }else{
+            console.log("jQuery funciona");
+        }
+        //validacion de formularios.
+        $("#errores").hide();
+        $("#mensajeExito").hide();
+        //expresion regular para validar email
+        function isEmail(email) {
+          var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+          return regex.test(email);
+        }
+        
+        $("#botonEnviar").click(function(){
+            
+            //verificacion de campos no vacios
+            
+            var errores = "";
+            if($("#email").val() == ""){
+                errores += "Email vacio <br>";
+               }else if(isEmail($("#email").val()) == false){
+                    errores += "formato de email no valido <br>";
+                }
+            
+            if($("#telefono").val() == ""){
+                errores += "Teléfono vacio <br>";
+               }else if($.isNumeric($("#telefono").val()) == false){
+                    errores += "Teléfono no valido <br>";
+               }
+            
+            if($("#password").val() == ""){
+                errores += "Password vacio <br>";
+               }
+            
+            if($("#confirmarPassword").val() == ""){
+                errores += "ConfrimarPassword vacio <br>";
+               }
+            
+            //validar passwords iguales
+            if($("#password").val() != $("#confirmarPassword").val()){
+                errores += "Contraseñas no coinciden <br>";
+               }
+               
+            if(errores != ""){
+                    $("#errores").fadeIn(1000,function(){
+                    $("#errores").css("fontSize","75%");
+                    $("#errores").html(errores);    
+                    });
+                $("#mensajeExito").hide();
+               }else{
+                   $("#errores").hide();
+                   errores = "";
+                   $("#mensajeExito").fadeIn(1000,function(){
+                        $("#mensajeExito").html("Registro exitoso");                         
+                    });
+                    
+                }
+            
+            
+            
+            
+        });
+        
+        //fin de valida formularios
+        /*var texto = "las expresiones regulares son geneiales";
+        var regex = /e/g;
+        var resultado = texto.match(regex);
+        alert (resultado);*/
+       /* $("#circulo").click(function(){
+            //$("p").html("Este texto a cambiado");
+            //alert($("p").html());
+            //alert("click al circulo");
+            $("#circulo").css("background-color","red");
+            $("#circulo").css("width","300px");
+            $("#circulo").css("height","300px");
+        });*/
+        /*$("#circulo").hover(function(){
+            $("p").html("este texto a cambiado");
+        });
+        $("#circulo").hover(function(){
+            $("iframe").attr("src","https://eco.com");
+        });*/
+        /*$("button").hide();
+        $("div").click(function(){
+            //$(this).css("display","none");
+            /*if($(this).attr("id") == "circulo"){
+                alert("hiciste click sobre un "+$(this).attr("id"));   
+               }else{
+                alert("hiciste click sobre un cuadrado");
+               }
+            */
+             /*$(this).fadeOut(4000);
+            $("button").fadeIn(3000);
+        });
+        $("button").click(function(){
+            $(this).fadeOut(3000,function(){
+                alert("terminado");
+            });
+        })*/
+        /*$("#circulo").click(function(){
+           //alert("Haz realizado click en el circulo");
+            $(this).animate({
+                width: "400px",
+                height: "400px",
+                marginLeft: "100px",
+                marginTop: "100px",
+                background: "red"
+              }, 1000, function() {
+                $(this).css("background-color","red");
+              });
+        });*/
+        
+        
+    </script>
+</body>

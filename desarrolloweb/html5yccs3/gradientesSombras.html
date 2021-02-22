@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gradientes y sombras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="app.min.css">
+    <style>
+        #gradiente{
+            width: 500px;
+            height: 200px;
+            background-color: blue;
+            background: linear-gradient(to left,red,white,green);
+        }
+        #gradienteRadial{
+            width: 500px;
+            height: 200px;
+            background-color: blue;
+            background: radial-gradient(red,white);
+        }
+        #gradienteDesafio{
+            width: 500px;
+            height: 200px;
+            background-color: blue;
+            background: linear-gradient(to bottom left,green,yellow);
+        }
+        h2{
+            text-shadow: 2px 2px 4px green, -5px -5px 4px yellow;
+            color: white;
+        }
+        h3{
+            text-shadow: 0px 0px 5px red;
+            color: white;
+        }
+        #sombra{
+            width: 200px;
+            height: 200px;
+            box-shadow: 10px 10px 6px grey;
+            background-color: antiquewhite;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h2>Este texto tiene sombra</h2>
+    <h3>Este texto brilla</h3>
+     <div id="gradiente">
+         <h1>esto es un gradiente lineal</h1>
+     </div>
+     <div id="gradienteRadial">esto es un gradiente radial</div>
+     <div id="gradienteDesafio">desafio</div>
+     <div id="sombra"></div>
+  </body>
+</html>

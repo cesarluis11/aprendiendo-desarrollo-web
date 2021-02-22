@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/f22f712e94.css">
+    <style type="text/css">
+        body{
+            position: relative;
+        }
+        .jumbotron{
+            background-image: linear-gradient(#ffaa00,white);
+            text-align: center;
+        }
+        .card-img-top{
+            width: 100%;
+            height: 50%;
+        }
+        .footer{
+            background-image: linear-gradient(white,red);
+            padding-bottom: 100px;
+            margin-top: 3%;
+            text-align: center;
+        }
+        
+      </style>
+    <title>my App</title>
+  </head>
+  <body data-spy="scroll" data-target="#navbar" data-offset="0">
+   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="navbar">
+      <a class="navbar-brand" href="#">My App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#jumbotron">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#acercade">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#descargar">Descargar App</a>
+          </li>
+        </ul>
+        <form class="form-inline pull-xs-right">
+          <input class="form-control mr-sm-2" type="email" placeholder="Email">
+          <input class="form-control mr-sm-2" type="password" placeholder="Password">
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
+        </form>
+      </div>
+    </nav>
+    
+    <div class="jumbotron" id="jumbotron">
+      <h1 class="display-4">!Consigue tu objetivo¡</h1>
+      <p class="lead">Esta es la razon por la que deberías descargarte esta fantastica app¡</p>
+      <hr class="my-4">
+      <p>¿Deseas comocer más? !Suscribete a nuestra lista de correo!</p>
+      <form class="form-inline-center" style=" margin-left: 25%; margin-right: 25%; ">
+          <div class="form-group">
+              <div class="input-group" style="text-align: center;">
+                  <input type="email" class="form-control" id="direccionEmail" placeholder="Tu email">
+              </div>              
+          </div>
+          <button type="submit" class="btn btn-primary">Suscribete</button>
+      </form>
+    </div>
+    <div class="container" id="acercade">
+        <div class="row-center" style="text-align: center">
+            <h1 >Porque esta app es impresionante
+            <p class="lead">Resume, otra vez, por que tu app es impresionante</p>
+            </h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card-deck">
+          <div class="card">
+            <img src="imagen1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="imagen2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="imagen3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="footer" id="descargar">
+        <h2 >Descarga la App 
+        <p class="lead">Descubre un nuevo mundo </p></h2>
+        <p id="redesSociales"><a href=""><img src="aple.png" height="70px" width="100px"></a> &nbsp;&nbsp;&nbsp;<a href=""><img src="google.png" height="70px" width="100px"></a></p>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cliente de email</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="app.min.css">
+    <style>
+      
+
+			@-webkit-keyframes pulse {
+				0% {
+					background-color: #CCC;
+				}
+				25% {
+					background-color: #EEE;
+				}
+				50% {
+					background-color: #CCC;
+				}
+				75% {
+					background-color: #EEE;
+				}
+				100% {
+					background-color: #CCC;
+				}
+			}
+			.scroll-page .loading {
+				margin: 12px auto;
+				border: 8px solid #AAA;
+				height: 16px;
+				width: 16px;
+				background: #CCC;
+				border-radius: 16px;
+				-webkit-animation: pulse 2s ease-in-out 0s infinite;
+			}
+    </style>
+  </head>
+
+  <body>
+    <div class="app-page" data-page="home">
+      <div class="app-topbar">
+        <div class="app-title">Envio de email</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+            <div class="app-button" data-target="enviarEmail">Lista</div>
+            <div class="app-button" data-target="enviarEmail">Enviar a un nuevo usuario</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="app-page" data-page="enviarEmail">
+        <div class="app-topbar blue">
+            <div class="app-title">Enviar email</div>
+            <div class="right app-button" data-back>Hecho</div>
+        </div>
+
+        <div class="app-content">
+            <div class="app-section">
+                De:<input class="app-input" placeholder="Remitente" name="remitente" id="remitente">
+            </div>
+            <div class="app-section">
+                Para:<input class="app-input" placeholder="Destinatario" name="destinatario" id="destinatario">
+            </div>
+            <form class="app-section">
+                <input class="app-input" name="asunto" placeholder="asunto">
+                <textarea class="app-input" name="mensaje" placeholder="mensaje"></textarea>
+                <div class="app-button green app-submit" id="enviar">Enviar</div>
+            </form>
+        </div>
+    </div>
+    <script src="zepto.js"></script>
+    <script src="app.min.js"></script>
+    <script>
+        
+      App.controller('home', function (page) {
+        
+      });
+      App.controller('enviarEmail', function (page) {
+        
+        if(typeof localStorage != 'undefined'){
+            
+            if(localStorage.getItem('remitente') != null){
+               
+                $(page).find('#remitente').val(localStorage.getItem('remitente'))       ;
+                
+              }
+            
+           }
+          
+        $(page).find('#enviar').clickable().on('click',function(){
+           //enviar un email.
+            if(typeof localStorage != 'undefined'){
+                localStorage.setItem('remitente',$('#remitente').val());
+                alert('email enviado');
+                var listaReceptores = new Array();
+                if(localStorage.getItem('listaReceptores') != null){
+                    
+                    listaReceptores = JSON.parse(localStorage.getItem('listaReceptores'));
+                    
+                   }
+                
+                if($.inArray($('#destinatario').val(),listaReceptores == -1)){
+                    
+                    listaReceptores.push($('#destinatario').val());
+                    localStorage.setItem('llistaReceptores',JSON.stringify(listaReceptores));
+                    console.log(listaReceptores);
+                   
+                   }
+            }else{
+                alert('actualizar el navegador');
+            }
+        });
+      });    
+      
+      try {
+        App.restore();
+      } catch (err) {
+        App.load('home');
+      }
+    </script>
+  </body>
+</html>

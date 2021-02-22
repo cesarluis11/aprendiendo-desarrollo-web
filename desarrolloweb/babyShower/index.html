@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/f22f712e94.css">
+    <style type="text/css">
+        
+        #titulo{
+            font-family: cursive;
+            color: deeppink;
+        }
+        .jumbotron{
+            background-image: linear-gradient(pink, white);
+            text-align: center;
+        }
+        #fraseGrande{
+            font-family: cursive;
+            color: #cc00ff;
+            
+        }
+        #frasePequena{
+            font-family: sans-serif;
+            font-weight: bold;
+            font-family: cursive;
+            
+        }
+        p{
+            font-family: cursive;
+        }
+        h5{
+            font-family: cursive;
+        }
+        h3{
+            font-family: cursive;
+        }
+        .ver:hover {
+            font-family: cursive;
+            text-decoration: underline;
+            cursor: pointer;
+            color: hotpink;
+        }
+        #direccion{
+            text-align: center;
+        }
+        .footer{
+            background-image: linear-gradient(white,pink);
+            text-align: center;
+        }
+        
+        /*slider*/
+        .slider {
+            background-image: radial-gradient(pink,white);
+            width: 100%;
+            margin-top: 25px;
+            overflow: hidden;
+        }
+
+        .slider ul {
+            text-align: center;
+            display: flex;
+            padding: 0;
+            width: 500%;
+            animation: cambio 5s infinite alternate linear;
+        }
+
+        .slider li {
+            width: 100%;
+            list-style: none;
+        }
+
+        .slider img {
+            text-align: center;
+            height: 200px;
+            width: 75%;
+        }
+
+        @keyframes cambio {
+            0% {margin-left: 0;}
+            20% {margin-left: 0;}
+
+            25% {margin-left: -100%;}
+            45% {margin-left: -100%;}
+
+            50% {margin-left: -200%;}
+            70% {margin-left: -200%;}
+
+            75% {margin-left: -300%;}
+            100% {margin-left: -300%;}
+        }
+
+        
+      </style>
+    <title>Baby_Shower_Renata_Eliana</title>
+  </head>
+  <body>
+  
+   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
+      <h5 id="titulo"><img src="buho.jfif" width="35px" height="35px"> &nbsp;Baby Shower de Renata Eliana</h5>
+   </nav>
+   
+    <div id="arriba">
+        &nbsp;
+    </div>
+    
+    <div class="jumbotron" id="jumbotron">
+      <h1 class="display-4" id="fraseGrande">Una Pequeña Viene En Camino</h1>
+      <p class="lead" id="frasePequena">⭐️ Te invitamos al baby shower de nuestra bebita <spam><u>RENATA ELIANA</u></spam> que pronto llegará a nuestras vidas. ⭐️</p>
+      <hr class="my-4">
+      <p>Espero que puedan acompañarnos el próximo 15 de Diciembre a las 2 de la tarde</p>
+      <p id="verDireccion" class="ver">Click Para Ver Dirección</p>
+      <div id="direccion" class="container">
+        <p>Calle tigre #5, Col. amp.las torres 2da.seccion,tultitlan, C.P: 54942 &nbsp;</p>   
+        <h5>Localizanos en el mapa</h5>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.697054838887!2d-99.15510215772217!3d19.59747533211808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f6677ff2b3cf%3A0xad6922a574aa8c46!2sSierra%20de%20Guadalupe%2C%20Buenavista%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1574184394302!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    </div>
+    <div id="verInvitacion" class="ver" style="text-align: center">click Para Ver Invitación</div>
+    <div id="invitacion" class="container">
+       <img src="invitacion.jpeg" alt="">
+        <a download="nombre_archivo" href="invitacion.jpeg">Descargar Invitación</a>
+    </div>
+    
+    <div class="slider">
+        <ul>
+            <li>
+              <img src="buho1.jpg">
+            </li>
+            <li>
+              <img src="buho2.jpg">
+            </li>
+            <li>
+              <img src="buho3.jpg">
+            </li>
+            <li>
+              <img src="buho4.jpg">
+            </li>
+            <li>
+                <img src="buhi5.jpg">
+            </li>
+        </ul>
+    </div>
+    
+    <div class="footer" id="descargar">
+       <h3>!!! TE ESPERAMOS ¡¡¡</h3>
+        <div style="text-align: right">
+        <a href="#arriba" id="flechaArriba"><img src="flecha.jpg" width="50px" height="50px"></a>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    
+    <script type="application/javascript">
+        
+        $(document).ready(function(){
+            $("#direccion").hide();
+            $("#invitacion").hide();
+            $("#verDireccion").click(function(){
+                $("#direccion").slideToggle("slow");
+            });
+            
+            $("#verInvitacion").click(function(){
+                $("#invitacion").slideToggle("slow");
+            });
+        });
+        
+    </script>
+  </body>
+</html>

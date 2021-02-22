@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Javascript</title>
+    </head>
+    <body>
+       <p id="texto">hola mundo</p>
+       <button id="miBoton">cambiar el texto</button>
+       <p id="segundoParafo">javascript es...</p>
+       <button id="segundoBoton"> Cambia el texto</button>
+       <p id="parrafoVacio"></p>
+       <button id="crearParrafo">crea parrafo</button>
+       <p id="parrafoConEstilo">Texto con estilo</p>
+       <button id="botonModificarEstilo">Modifica el estilo</button>
+       
+       <script type="application/javascript">
+           
+           //comentario en una linea
+           /*comentarios 
+           en varias 
+           lineas*/
+           document.getElementById("miBoton").onclick = function() {  
+            document.getElementById("texto").innerHTML = "hola cesar luis";    
+               
+           };
+           
+           document.getElementById("segundoBoton").onclick = function() {
+               document.getElementById("segundoParafo").innerHTML =       document.getElementById("segundoParafo").innerHTML + " Increible";
+               
+           };
+           
+           document.getElementById("crearParrafo").onclick = function() {
+               document.getElementById("parrafoVacio").innerHTML = "<h1>hola a todos</h1>";
+               
+           };
+           
+           document.getElementById("botonModificarEstilo").onclick = function() {
+               /*document.getElementById("parrafoConEstilo").style.color = "red";
+               document.getElementById("parrafoConEstilo").style.fontSize = "50px";
+               document.getElementById("parrafoConEstilo").style.fontWeight = "900";*/
+               document.getElementById("parrafoConEstilo").style.display = "none";
+               
+           };
+           
+           
+        </script>
+    </body>
+</html>

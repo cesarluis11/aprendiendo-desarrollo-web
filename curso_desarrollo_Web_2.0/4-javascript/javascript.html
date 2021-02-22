@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>javascript</title>
+	
+</head>
+<body>
+	<p id="texto">hola mundo</p>
+	<button id="btn">Cambiar el texto de arriba </button>
+	<p id="segundoParrafo">JavaScript es...</p>
+	<button id="btn2">Cambia el texto</button>
+	<p id="parrafovacio"></p>
+	<button id="crearparrafo">Crea el parrafo</button>
+	
+	<script type="text/javascript">
+		document.getElementById('btn').onclick = function(){
+			//esta funcion cambia el texto del parrafo
+			document.getElementById('texto').innerHTML = 'cesar cruz';
+		}
+
+		document.getElementById('btn2').onclick = function(){
+		/*	document.getElementById('segundoParrafo').innerHTML = 'increible';*/
+
+			document.getElementById('segundoParrafo').innerHTML = document.getElementById('segundoParrafo').innerHTML + "increible";
+		}
+
+		document.getElementById('crearparrafo').onclick = function (){
+			document.getElementById('parrafovacio').innerHTML = 'haz creado un parrafo nuevo';
+		}
+	</script>
+</body>
+</html>

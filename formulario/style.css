@@ -1,0 +1,15 @@
+body{
+    padding: 5%;
+    font-family: sans-serif;
+      background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(51, 153, 255));
+    
+}
+
+h2{
+    text-align: center;
+    border: 1px solid;
+    border-radius: 20px;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+
+}
